@@ -7,9 +7,9 @@ Sentry.init({ dsn: 'https://29f8c9ee84a14170b4ccebd7befda2b1@sentry.io/1424076' 
   &copy; {% if site.since and since != current %} {{ since }} - {% endif %}
   <span itemprop="copyrightYear">{{ current }}</span>
   <span class="with-love">
-    <i class="fa fa-{{ site.authoricon }}"></i>
+    <i class="fa fa-github"></i>
   </span>
-  <a class="author" itemprop="copyrightHolder" href="https://github.com/ifmos" >{{ site.author }}</a>
+  <a class="author" itemprop="copyrightHolder" href="https://github.com/{{ site.github_username }}" >{{ site.author }}</a>
 </div>
 
 {% if site.copyright %}
