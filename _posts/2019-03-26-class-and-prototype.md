@@ -3,6 +3,8 @@ layout: post
 date: 2019-03-26 15:08:59 +0800
 title: class-and-prototype
 categories:
+  - front-end
+tags:
   - class
   - prototype
   - javascript
