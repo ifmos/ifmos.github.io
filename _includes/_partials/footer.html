@@ -1,0 +1,22 @@
+<div class="copyright" >
+  {% assign current = site.time | date: '%Y' %}
+  {% assign since = site.since | downcase %}
+  &copy; {% if site.since and since != current %} {{ since }} - {% endif %}
+  <span itemprop="copyrightYear">{{ current }}</span>
+  <span class="with-love">
+    <i class="fa fa-{{ site.authoricon }}"></i>
+  </span>
+  <a class="author" itemprop="copyrightHolder" href="https://github.com/ifmos" >{{ site.author }}</a>
+</div>
+
+{% if site.copyright %}
+<div class="powered-by">
+  {{ __.footer.powered | replace: '%s', '<a class="theme-link" href="https://github.com/ifmos/ifmos.github.io">Github</a>') }}
+</div>
+
+<div class="theme-info">
+  <a class="theme-link" href="http://www.beian.gov.cn/portal/index.do">
+    桂ICP备16007714号
+  </a>
+</div>
+{% endif %}
