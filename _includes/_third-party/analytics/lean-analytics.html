@@ -55,9 +55,10 @@
       query.find( ).then(function(results) {
           if (results.length > 0) {
             var counter = results[0];
-            counter.fetchWhenSave(true);
             counter.increment("time");
-            counter.save().then(function(counter) {
+            counter.save({
+              fetchWhenSave: true
+            }).then(function(counter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(counter.get('time'));
               }).catch(function(error) {
